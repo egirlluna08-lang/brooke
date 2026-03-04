@@ -236,7 +236,7 @@
 
             <button class="link-btn" id="paypalBtn" style="background: rgba(255, 20, 147, 0.2); border: 2px solid #ff1493; color: #ff1493;" onclick="copyPaypal(this)">PayPal</button>
 
-            <button class="link-btn" id="sentbioBtn" style="background: rgba(255, 20, 147, 0.2); border: 2px solid #ff1493; color: #ff1493;" onclick="copySentbio(this)">sent.bio</button>
+            <a href="https://sent.bio/brattybrooke" target="_blank" class="link-btn" style="background: rgba(255, 20, 147, 0.2); border: 2px solid #ff1493; color: #ff1493;">sent.bio</a>
         </div>
 
         <div class="footer">
@@ -287,18 +287,6 @@
             });
         }
 
-        function copySentbio(button) {
-            const url = 'https://sent.bio/brattybrooke';
-            navigator.clipboard.writeText(url).then(function() {
-                const originalText = button.innerText;
-                button.innerText = '✓ copied';
-                setTimeout(() => {
-                    button.innerText = originalText;
-                }, 2000);
-            }).catch(function(err) {
-                alert('Failed to copy');
-            });
-        }
     </script>
 </body>
 </html>
